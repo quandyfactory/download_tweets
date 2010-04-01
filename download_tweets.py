@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 __title__ = 'Download all the Tweets For a Twitter Username'
-__version__ = 0.1
+__version__ = 0.11
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
@@ -21,7 +21,7 @@ def get_tweets():
     # initialize flag to continue loading pages
     more = True 
     # initialize the tweet keys we want to keep
-    keys = 'text created_at'.split(' ')
+    keys = 'created_at text'.split(' ')
     # initialize filename
     filename = 'Tweets_%s.txt' % (username)
     # write column headings
@@ -52,7 +52,8 @@ def get_tweets():
                 tweetfile.close()
     tweetfile = open(filename, 'r')
     lines = tweetfile.read().split('\n')
-    print 'Download complete with %s tweets archived. All your tweets are in tab-delimited format in %s.' % (len(lines), username, filename)
+    tweetfile.close()
+    print 'Download complete with %s tweets archived. All your tweets are in tab-delimited format in %s.' % (len(lines), filename)
 
 if __name__ == '__main__':
     get_tweets()
