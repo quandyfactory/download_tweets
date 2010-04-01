@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__title__ = 'Download Tweets For a Twitter Username'
+__title__ = 'Download all the Tweets For a Twitter Username'
 __version__ = 0.1
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
