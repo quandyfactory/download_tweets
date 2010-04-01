@@ -37,7 +37,9 @@ It's pretty simple to use, assuming you have Python installed on your system. Li
 
 Once you have determined that you have Python on your system, just download the `download_tweets.py` script and save it somewhere. Then, just execute it. (*nix uses might have to set execute permissions.)
 
-The script will prompt you to enter the Twitter username you want to download. Then it will download all of that user's tweets and save them in a tab-delimited text file named `Tweets_*Username*.txt`.
+The script will prompt you to enter the Twitter username you want to download. Then it will download all of that user's tweets and save them in a tab-delimited text file named `Tweets_*Username*.txt`. 
+
+You should be able to open the data file in your spreadsheet program (like OpenOffice Calc or Microsoft Office Excel).
 
 ## Notes
 
