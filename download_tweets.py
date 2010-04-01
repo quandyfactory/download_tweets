@@ -14,7 +14,7 @@ import json
 import urllib
 
 def get_tweets():
-    print 'Enter your username (e.g. Lucers) below.'
+    print 'Enter your username (e.g. RyanMcGreal) below.'
     username = raw_input('Username: ')
     # initialize tweets page number
     page = 0 
