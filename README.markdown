@@ -33,7 +33,9 @@ Released under the GNU General Public Licence, Version 2:
 
 ## Using Download Tweets
     
-It's pretty simple to use. [Download](http://github.com/quandyfactory/download_tweets) download_tweets.py and save it somewhere. Then, just execute it. (*nix uses might have to set execute permissions.)
+It's pretty simple to use, assuming you have Python installed on your system. Linux and Mac OSX users have Python installed by default. Windows users will need to [download and install Python](http://python.org/download/) - install version 2.6.x, not version 3.
+
+Once you have determined that you have Python on your system, just download the `download_tweets.py` script and save it somewhere. Then, just execute it. (*nix uses might have to set execute permissions.)
 
 The script will prompt you to enter the Twitter username you want to download. Then it will download all of that user's tweets and save them in a tab-delimited text file named `Tweets_*Username*.txt`.
 
