@@ -5,7 +5,7 @@ This program lets you download all the tweets for a given Twitter username.
 """
 
 __title__ = 'Download Tweets'
-__version__ = 0.11
+__version__ = 0.2
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
