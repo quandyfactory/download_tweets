@@ -12,10 +12,13 @@ __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://ww
 
 import json
 import urllib
+import optparse
+import sys
 
-def get_tweets():
-    print 'Enter your username (e.g. RyanMcGreal) below.'
-    username = raw_input('Username: ')
+def get_tweets(username, filename):
+    if not username:
+        print 'Enter your username (e.g. RyanMcGreal) below.'
+        username = raw_input('Username: ')
     # initialize tweets page number
     page = 0 
     # initialize flag to continue loading pages
@@ -23,7 +26,8 @@ def get_tweets():
     # initialize the tweet keys we want to keep
     keys = 'created_at text'.split(' ')
     # initialize filename
-    filename = 'Tweets_%s.txt' % (username)
+    if not filename:
+        filename = 'Tweets_%s.txt' % (username)
     # write column headings
     tweetfile = open(filename, 'w')
     tweetfile.write('Tweet\tPosted\n')
@@ -56,5 +60,14 @@ def get_tweets():
     print 'Download complete with %s tweets archived. All your tweets are in tab-delimited format in %s.' % (len(lines), filename)
 
 if __name__ == '__main__':
-    get_tweets()
+    parser = optparse.OptionParser()
+    parser.add_option("-u", "--user", dest="username", help="Downloads tweets for USER", metavar="USER")
+    parser.add_option('-o', '--output', 
+                      dest="output_filename", 
+                      help = "Save output to FILE",
+                      metavar="FILE",
+                      )
+    
+    options, remainder = parser.parse_args()
+    get_tweets(options.username, options.output_filename)
     
