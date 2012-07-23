@@ -5,7 +5,7 @@ This program lets you download all the tweets for a given Twitter username.
 """
 
 __title__ = 'Download Tweets'
-__version__ = 0.2
+__version__ = 0.3
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
@@ -27,10 +27,10 @@ def get_tweets(username, filename):
     keys = 'created_at text'.split(' ')
     # initialize filename
     if not filename:
-        filename = 'Tweets_%s.txt' % (username)
+        filename = 'Tweets_%s.tsv' % (username)
     # write column headings
     tweetfile = open(filename, 'w')
-    tweetfile.write('Date_Posted\tTweet\n')
+    tweetfile.write('ID\tDate_Posted\tTweet\n')
     tweetfile.close()
     while more == True and username != '':
         # initialize output array
@@ -50,9 +50,7 @@ def get_tweets(username, filename):
             more = False
         else:
             for tweet in tweets:
-                this_tweetlist = [tweet[key].replace('\n', '') for key in keys]
-                # print str(this_tweetlist)
-                this_tweet = '%s\n' % ('\t'.join(this_tweetlist))
+                this_tweet = '%s\t%s\t%s\n' % (tweet['id_str'], tweet['created_at'], tweet['text'])
                 this_tweet = this_tweet.encode('utf-8', 'replace')
                 tweetfile = open(filename, 'a')
                 tweetfile.write(this_tweet)
