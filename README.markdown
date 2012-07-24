@@ -17,11 +17,17 @@ Released under the GNU General Public Licence, Version 2:
 
 ### This Version
 
-* Version: 0.3
+* Version: 0.4
 
-* Release Date: 2012-07-23
+* Release Date: 2012-07-24
 
 ### Revision History
+
+#### Version: 0.4
+
+* Release Date: 2012-07-24
+* Changes:
+    * Better error handling, including passing error message from twitter server to console.
 
 #### Version: 0.3
 
