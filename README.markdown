@@ -75,9 +75,9 @@ That's it.
 
 ## Notes
 
-1. The twitter API will only let you [download the most recent 3,200 tweets](http://apiwiki.twitter.com/Things-Every-Developer-Should-Know). (Don't worry - all your tweets are still in their database. They eventually plan to make them all available.)
+1. The twitter API will only let you [download the most recent 3,200 tweets](https://dev.twitter.com/docs/things-every-developer-should-know). (Don't worry - all your tweets are still in their database. They eventually plan to make them all available.)
 
-2. The Twitter API also [limits the number of data requests](http://apiwiki.twitter.com/Rate-limiting) to 150 per hour. 
+2. The Twitter API also [limits the number of data requests](https://dev.twitter.com/docs/rate-limiting) to 150 per hour. 
 
 ## Planned Features
 
