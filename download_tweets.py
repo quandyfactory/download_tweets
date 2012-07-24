@@ -5,7 +5,7 @@ This program lets you download all the tweets for a given Twitter username.
 """
 
 __title__ = 'Download Tweets'
-__version__ = 0.3
+__version__ = 0.4
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
@@ -48,7 +48,17 @@ def get_tweets(username, filename):
             tweets = []
         if len(tweets) == 0: 
             more = False
-        else:
+        try:
+            error = tweets['error']
+            print
+            print "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
+            print "* "
+            print "* ERROR: %s" % (error)
+            print "* "
+            print "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
+            print
+            more = False
+        except:
             for tweet in tweets:
                 this_tweet = '%s\t%s\t%s\n' % (tweet['id_str'], tweet['created_at'], tweet['text'])
                 this_tweet = this_tweet.encode('utf-8', 'replace')
@@ -58,7 +68,8 @@ def get_tweets(username, filename):
     tweetfile = open(filename, 'r')
     lines = tweetfile.read().split('\n')
     tweetfile.close()
-    print 'Download complete with %s tweets archived. All your tweets are in tab-delimited format in %s.' % (len(lines), filename)
+    
+    print 'Download complete. Archived tweets are in tab-delimited format in %s.' % (filename)
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
