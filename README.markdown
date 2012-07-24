@@ -78,8 +78,3 @@ That's it.
 1. The twitter API will only let you [download the most recent 3,200 tweets](https://dev.twitter.com/docs/things-every-developer-should-know). (Don't worry - all your tweets are still in their database. They eventually plan to make them all available.)
 
 2. The Twitter API also [limits the number of data requests](https://dev.twitter.com/docs/rate-limiting) to 150 per hour. 
-
-## Planned Features
-
-* Add validation to fail gracefully if the user reaches the 150 requests per hour limit. Right now it throws an error.
-
