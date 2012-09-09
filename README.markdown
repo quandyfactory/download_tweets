@@ -21,32 +21,6 @@ Released under the GNU General Public Licence, Version 2:
 
 * Release Date: 2012-07-24
 
-### Revision History
-
-#### Version: 0.4
-
-* Release Date: 2012-07-24
-* Changes:
-    * Better error handling, including passing error message from twitter server to console.
-
-#### Version: 0.3
-
-* Release Date: 2012-07-23
-* Changes:
-    * Changed JSON parsing and conversion to tab-delimited to track change in twitter API.
-
-#### Version: 0.2
-
-* Release Date: 2010-04-06
-* Changes:
-    * Merged fork from Jay Parlar that added option parsing for username and output filename.
-
-#### Version: 0.1
-
-* Release Date: 2010-03-31
-* Changes:
-    * First commit.
-
 ### Installation
 
 It's pretty simple to install, assuming you have Python installed on your system. Linux and Mac OSX users have Python installed by default. Windows users will need to [download and install Python](http://python.org/download/) - install version 2.6.x, not version 3.
@@ -78,3 +52,30 @@ That's it.
 1. The twitter API will only let you [download the most recent 3,200 tweets](https://dev.twitter.com/docs/things-every-developer-should-know). (Don't worry - all your tweets are still in their database. They eventually plan to make them all available.)
 
 2. The Twitter API also [limits the number of data requests](https://dev.twitter.com/docs/rate-limiting) to 150 per hour. 
+
+
+### Revision History
+
+#### Version: 0.4
+
+* Release Date: 2012-07-24
+* Changes:
+    * Better error handling, including passing error message from twitter server to console.
+
+#### Version: 0.3
+
+* Release Date: 2012-07-23
+* Changes:
+    * Changed JSON parsing and conversion to tab-delimited to track change in twitter API.
+
+#### Version: 0.2
+
+* Release Date: 2010-04-06
+* Changes:
+    * Merged fork from Jay Parlar that added option parsing for username and output filename.
+
+#### Version: 0.1
+
+* Release Date: 2010-03-31
+* Changes:
+    * First commit.
