@@ -5,15 +5,20 @@ This program lets you download all the tweets for a given Twitter username.
 """
 
 __title__ = 'Download Tweets'
-__version__ = 0.4
+__version__ = 0.5
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
 
+import datetime
 import json
 import urllib
 import optparse
 import sys
+
+def filename_datestamp():
+    """Returns the current date/time stamp in string format friendly for filenames"""
+    return str(datetime.datetime.now())[:-7].replace(':', '-').replace(' ', '_')
 
 def get_tweets(username, filename):
     if not username:
@@ -27,7 +32,7 @@ def get_tweets(username, filename):
     keys = 'created_at text'.split(' ')
     # initialize filename
     if not filename:
-        filename = 'Tweets_%s.tsv' % (username)
+        filename = 'Tweets_%s_%s.tsv' % (username, filename_datestamp())
     # write column headings
     tweetfile = open(filename, 'w')
     tweetfile.write('ID\tDate_Posted\tTweet\n')

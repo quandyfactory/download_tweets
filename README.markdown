@@ -17,9 +17,9 @@ Released under the GNU General Public Licence, Version 2:
 
 ### This Version
 
-* Version: 0.4
+* Version: 0.5
 
-* Release Date: 2012-07-24
+* Release Date: 2012-09-28
 
 ### Installation
 
@@ -55,6 +55,12 @@ That's it.
 
 
 ### Revision History
+
+### Version: 0.5
+
+* Releast Date: 2012-09-28
+* Changes:
+    * Filename now includes date/time stamp of when the script ran.
 
 #### Version: 0.4
 
