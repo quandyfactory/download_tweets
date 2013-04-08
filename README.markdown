@@ -17,9 +17,9 @@ Released under the GNU General Public Licence, Version 2:
 
 ### This Version
 
-* Version: 0.5
+* Version: 0.5.1
 
-* Release Date: 2012-09-28
+* Release Date: 2013-04-08
 
 ### Installation
 
@@ -55,6 +55,12 @@ That's it.
 
 
 ### Revision History
+
+### Version: 0.5.1
+
+* Release Date: 2013-04-08
+* Changes: 
+    * Fixed bug that caused line breaks in tweet text.
 
 ### Version: 0.5
 
