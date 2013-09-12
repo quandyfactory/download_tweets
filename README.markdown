@@ -17,9 +17,9 @@ Released under the GNU General Public Licence, Version 2:
 
 ### This Version
 
-* Version: 0.5.1
+* Version: 0.5.2
 
-* Release Date: 2013-04-08
+* Release Date: 2013-09-12
 
 ### Installation
 
@@ -55,6 +55,12 @@ That's it.
 
 
 ### Revision History
+
+### Version: 0.5.2
+
+* Release Date: 2013-09-12
+* Changes:
+    * Fixed error in filename.
 
 ### Version: 0.5.1
 

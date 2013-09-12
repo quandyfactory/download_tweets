@@ -5,7 +5,7 @@ This program lets you download all the tweets for a given Twitter username.
 """
 
 __title__ = 'Download Tweets'
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/48/download_tweets"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
@@ -32,7 +32,7 @@ def get_tweets(username, filename):
     keys = 'created_at text'.split(' ')
     # initialize filename
     if not filename:
-        filename = '/home/hammertime/hcf/tweets_%s_%s.tsv' % (username, filename_datestamp())
+        filename = 'tweets_%s_%s.tsv' % (username, filename_datestamp())
     # write column headings
     tweetfile = open(filename, 'w')
     tweetfile.write('ID\tDate_Posted\tTweet\n')
